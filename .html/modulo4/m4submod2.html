@@ -1,0 +1,62 @@
+<div class="panel-body" style="padding-bottom: 2px;">
+    <div class="row">
+        <div class="panel panel-success" style="margin-bottom: 5px;">
+            <div class="panel-heading pnl-heading-custom">
+                <h4 class="panel-title">
+                    Reportes
+                </h4>
+            </div>
+            <div class="panel-body">
+                <form target="_blank" id="frmReporteDoc" method="post" action=".lib/modulo4/linkModulo4.php" role="form">
+                    <div class="col-md-6">
+                        <div class="form-group frm-group-custom">
+                            <label for="docOfiCreador" class="control-label lbl-custom">Oficina:</label>
+                            <select class="form-control frm-control-custom" id="docOfiCreador" disabled>
+                                <option value="all">-- Todos --</option>
+                            </select>
+                            <input type="hidden" id="docOfiCreadorH" name="ndocOfiCreador">
+                            <input type="hidden" id="docImprimible" name="ndocImprimible" value="1">
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docReporteTipo" class="control-label lbl-custom">Tipo de Reporte:</label>
+                            <select class="form-control frm-control-custom" id="docReporteTipo" name="ndocReporteTipo">
+                                <option value="all">-- Todos --</option>
+                                <option value="creados">Documentos Tramitados</option>
+                                <option value="procesados">Documentos Recibidos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group frm-group-custom">
+                            <label for="docOrigen" class="control-label lbl-custom">Origen del Doc:</label>
+                            <select class="form-control frm-control-custom" id="docOrigen" name="ndocOrigen">
+                                <option value="all">-- Todos --</option>
+                                <option value="interno">Interno</option>
+                                <option value="externo">Externo</option>
+                            </select>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label class="control-label lbl-custom">Fecha de Doc:</label>
+                            <div style="display: inline;">
+                                <label style="color: #000;">De:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docFechaIni" name="ndocFechaIni">
+                                <label style="color: #000;">hasta:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docFechaFin" name="ndocFechaFin">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-primary" type="button" id="btnPreviewReporte" onclick="preview_reporte('html')" >Preliminar</button>
+                <button class="btn btn-danger" type="button" id="btnPdfReporte" onclick="preview_reporte('pdf')" >PDF</button>
+                <button class="btn btn-success" type="button" id="btnXlsReporte" onclick="preview_reporte('xls')" >EXCEL</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel">
+    <div class="panel-body">
+        <div id="vistaPreliminar">
+
+        </div>
+    </div>
+</div>

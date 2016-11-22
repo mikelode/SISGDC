@@ -1,0 +1,180 @@
+<div class="panel-body">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<span class="panel-title">
+				DOCUMENTOS POR RECIBIR
+			</span>
+		</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-body">
+			<table class="table tbl-resultado" id="tblDocPorProcesar">
+				<thead>
+					<tr>
+						<th>Nro</th>
+						<th>Oficina Remitente</th>
+						<th>Remitente</th>
+						<th>Documento</th>
+						<th>Mensaje</th>
+						<th style="width: 15%;">Acción</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL PARA LA RECEPCION -->
+
+<div class="modal fade" id="modalOperacionRecibir" tabindex="-1" role="dialog" aria-labelledby="recibirDocumento" aria-hidden="true" style="color:#3c763d">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="recibirDocumento">Recibir Documento</h4>
+			</div>
+			<div class="modal-body">
+				<form id="frmGrabarRecepcion" method="post" action=".lib/modulo2/linkModulo2.php">
+					<input type="hidden" id="docHisIdR" name="ndocHisIdR">
+					<div class="form-group">
+						<label class="control-label">Codigo del Documento:</label>
+						<input type="text" class="form-control" name="ndocRecibir" id="docRecibir" readonly>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Descripción:</label>
+						<textarea class="form-control" id="docMensajeRecibir" name="ndocMensajeRecibir" style="height: 100px; max-height: 100px;" placeholder="Mensaje o alguna observación"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-primary" id="btnRecibirDoc" onclick="grabarRecepcion()">Recibir y Guardar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL PARA LA DERIVACION SIMPLE -->
+
+<div class="modal fade" id="modalOperacionDerivar" tabindex="-1" role="dialog" aria-labelledby="derivarDocumento" aria-hidden="true" style="color:#3c763d">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="derivarDocumento">Enviar Documento</h4>
+			</div>
+			<div class="modal-body">
+				<form id="frmGrabarDerivacion" method="post" action=".lib/modulo2/linkModulo2.php">
+					<input type="hidden" id="docHisIdD" name="ndocHisIdD">
+					<div class="form-group">
+						<label class="control-label">Codigo del Documento:</label>
+						<input type="text" class="form-control" name="ndocDerivar" id="docDerivar" readonly>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Enviar el documento a:</label>
+						<select class="form-control select2" name="ndocEnvioDestino[]" id="docEnvioDestino" multiple="multiple" data-placeholder="Agregar Oficina" style="width: 100%; color: #1b809e;">
+							<option value="NA"> -- Elija uno -- </option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Detalle u Observación:</label>
+						<textarea class="form-control" id="docMensajeDerivar" name="ndocMensajeDerivar" style="height: 100px; max-height: 100px;" placeholder="Mensaje o alguna observación"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-success" id="btnDerivarDoc" onclick="grabarDerivacion('simple')">Enviar y Guardar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL PARA LA DERIVACION COMPUESTA -->
+
+<div class="modal fade" id="modalOperacionDerivarCD" tabindex="-1" role="dialog" aria-labelledby="derivarDocumentoCD" aria-hidden="true" style="color:#3c763d">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="derivarDocumentoCD">Derivar Mediante Documento</h4>
+			</div>
+			<div class="modal-body">
+				<form id="frmGrabarDerivacionCD" method="post" action=".lib/modulo2/linkModulo2.php">
+					<input type="hidden" id="docHisIdDCD" name="ndocHisIdDCD">
+					<div class="form-group">
+						<label class="control-label">Codigo del Documento:</label>
+						<input type="text" class="form-control" name="ndocDerivarCD" id="docDerivarCD" readonly>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tipo de Documento:</label>
+						<select name="ndocTipoDerivarCD" class="form-control" id="docTipoDerivarCD">
+							<option value="NA">-- Elegir --</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Número del Documento</label>
+						<input type="text" class="form-control" id="docCtrlPersonalCD" name="ndocCtrlPersonalCD">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Enviar el Documento a:</label>
+						<select class="form-control select2" name="ndocEnvioDestinoCD[]" id="docEnvioDestinoCD" multiple="multiple" data-placeholder="Agregar Oficina" style="width: 100%; color: #1b809e;">
+							<option value="NA"> -- Elija uno -- </option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Asunto o Detalle</label>
+						<textarea class="form-control" id="docAsuntoCD" name="ndocAsuntoCD"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-success" id="btnDerivarDocCD" onclick="grabarDerivacion('compuesta')">Enviar y Guardar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL PARA LA ATENCION -->
+
+<div class="modal fade" id="modalOperacionAtender" tabindex="-1" role="dialog" aria-labelledby="atenderDocumento" aria-hidden="true" style="color:#3c763d">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="atenderDocumento">Atender Documento</h4>
+			</div>
+			<div class="modal-body">
+				<form id="frmGrabarAtencion" method="post" action=".lib/modulo2/linkModulo2.php">
+					<input type="hidden" id="docHisIdA" name="ndocHisIdA">
+					<div class="form-group">
+						<label class="control-label">Codigo del Documento:</label>
+						<input type="text" class="form-control" name="ndocAtender" id="docAtender" readonly>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Descripción:</label>
+						<textarea class="form-control" id="docMensajeAtender" name="ndocMensajeAtender" style="height: 100px; max-height: 100px;" placeholder="Mensaje o alguna observación"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-success" id="btnAtenderDoc" onclick="grabarAtencion()">Atender y Guardar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('#docEnvioDestino').select2();
+	$('#docEnvioDestinoCD').select2();
+</script>

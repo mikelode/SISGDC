@@ -1,0 +1,60 @@
+<div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+			<span class="panel-title">
+				DOCUMENTOS EMITIDOS PENDIENTES DE ENVIO
+			</span>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-condensed display tbl-resultado" id="tblDocEmitidos" style="font-size: small">
+                    <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Documento</th>
+                        <th>Num. Doc.</th>
+                        <th>Fec. Doc.</th>
+                        <th>Remitente</th>
+                        <th>Fec. Registro</th>
+                        <th>Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+
+        $('#tblDocEmitidos').DataTable({
+            "language":{
+                "url": "DataTables/Spanish.json"
+            },
+            "processing": true,
+            "serverSide": true,
+            "ajax":{
+                "url": ".lib/modulo3/linkModulo3.php",
+                "type": "POST",
+                "data": {
+                    "initDataTable": 1
+                }
+            },
+            "columns":[
+                {"data":"docTipo"},
+                {"data":"arcCodExp"},
+                {"data":"arcControlPersonal"},
+                {"data":"docFecha"},
+                {"data":"remFullName"},
+                {"data":"arcFechaReg"},
+                {"data":"arcEstado"}
+            ]
+        });
+
+    });
+</script>

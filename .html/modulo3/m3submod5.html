@@ -1,0 +1,43 @@
+<br>
+	<div id="mod-header" class="mod-header">
+		<h3 class="mod-header-label">Reportes</h3>
+	</div>
+
+	<div id="mod-body1" class="mod-body">
+		<div id="mod-body1left" class="mod-bodyleft">
+			<div class="mod-body-controls">
+				<label class="mod-body-label">Seleccione &Aacute;rea</label>
+				<select id="selarea" class="mod-body-input-search">
+					<option value="0">-- Seleccione --</option>
+				</select>
+			</div>
+			<div class="mod-body-controls">
+				<button type="button" id="mod-btnGenerar" class="button btn btn-warning report-button" title="Generar Reporte" onClick="cargarReporte()"><span class="glyphicon glyphicon-file"></span></button>
+				<button type="button" id="mod-btnImprimir" class="button btn btn-primary report-button" title="Imprimir Reporte" onClick="imprimirReporte()"><span class="glyphicon glyphicon-print"></span></button>
+			</div>
+		</div>
+
+		<div id="mod-body1right" class="mod-bodyright">
+		</div>
+	</div>
+
+	<div id="mod-body2" class="mod-bodyreport-hide">
+		<label id="mod-bodyreport-label" class="mod-bodyreport-label">REPORTE DE EQUIPOS INFORM&Aacute;TICOS ACTIVOS POR &Aacute;REA</label>
+		<table id="tablareporte" class="mod-tablereporte">
+			<thead>
+				<th style="text-align:center" width="15%">&Aacute;REA</th>
+				<th style="text-align:center" width="10%">CATEGOR&Iacute;A</th>
+				<th style="text-align:center" width="25%">PERSONAL</th>
+				<th style="text-align:center" width="20%">DESCRIPCI&Oacute;N</th>
+				<th style="text-align:center" width="25%">ESPECIFICACIONES T&Eacute;CNICAS</th>
+			</thead>
+			<tbody id="tablebody">
+			</tbody>
+		</table>
+		<br>
+	</div>
+
+	<div id="mod-footer" class="mod-footer-hide">
+		<button type="button" id="ingresar" class="button btn btn-primary report-print" title="Imprimir Reporte" onClick="imprimirReporte()"><span class="glyphicon glyphicon-print"></span></button>
+	</div>
+<br>

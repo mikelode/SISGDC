@@ -1,0 +1,60 @@
+<div class="panel-body">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<span class="panel-title">
+				DOCUMENTOS ATENDIDOS o DERIVADOS
+			</span>
+		</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-body">
+			<table class="table tbl-resultado" id="tblDocProcesados" style="font-size: small">
+				<thead>
+				<tr>
+                    <th>Tipo Doc</th>
+                    <th>Documento</th>
+					<th>Oficina Remitente</th>
+					<th>Remitente</th>
+                    <th>Acción</th>
+                    <th>Fec. Acción</th>
+					<th>Mensaje de Acción</th>
+                    <th>Destinatarios</th>
+				</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+
+        $('#tblDocProcesados').DataTable({
+            "language":{
+                "url": "DataTables/Spanish.json"
+            },
+            "processing": true,
+            "serverSide": true,
+            "ajax":{
+                "url": ".lib/modulo2/linkModulo2.php",
+                "type": "POST",
+                "data": {
+                    "initSubModulo2": 1
+                }
+            },
+            "columns":[
+                {"data":"docTipo"},
+                {"data":"arcCodExp"},
+                {"data":"remOfi"},
+                {"data":"remFullName"},
+                {"data":"hisAccion"},
+                {"data":"hisFechaAccion"},
+                {"data":"hisDescAccion"},
+                {"data":"hisDestinos"}
+            ]
+        });
+
+    });
+</script>

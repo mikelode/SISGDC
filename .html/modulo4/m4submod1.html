@@ -1,0 +1,154 @@
+<div class="panel-body" style="padding-bottom: 2px;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-success" style="margin-bottom: 5px;">
+                <div class="panel-heading pnl-heading-custom">
+                    <h4 class="panel-title">
+                        Búsqueda por Documento
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <form id="frmBuscDoc" method="post" action=".lib/modulo4/linkModulo4.php" role="form">
+                        <div class="form-group frm-group-custom">
+                            <label for="docCodigo" class="control-label lbl-custom">Código del Doc:</label>
+                            <input type="search" id="docCodigo" name="ndocCodigo" class="form-control frm-control-custom">
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docTipo" class="control-label lbl-custom">Tipo de Doc:</label>
+                            <select class="form-control frm-control-custom" id="docTipo" name="ndocTipo">
+                                <option value="all"> -- Todos -- </option>
+                            </select>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label class="control-label lbl-custom">Fecha de Doc:</label>
+                            <div style="display: inline;">
+                                <label style="color: #000;">De:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docFechaIni" name="ndocFechaIni">
+                                <label style="color: #000;">hasta:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docFechaFin" name="ndocFechaFin">
+                            </div>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docOfiCreador" class="control-label lbl-custom">Of. que registró:</label>
+                            <select class="form-control frm-control-custom" id="docOfiCreador" name="ndocOfiCreador">
+                                <option value="all">-- Todos --</option>
+                            </select>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docOrigen" class="control-label lbl-custom">Origen del Doc:</label>
+                            <select class="form-control frm-control-custom" id="docOrigen" name="ndocOrigen">
+                                <option value="all">-- Todos --</option>
+                                <option value="interno">Interno</option>
+                                <option value="externo">Externo</option>
+                            </select>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docAsunto" class="control-label lbl-custom">Asunto:</label>
+                            <input class="form-control frm-control-custom" id="docAsunto" name="ndocAsunto">
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-default" type="button" id="btnBuscarDoc" onclick="buscar_documento('documento')" >Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading pnl-heading-custom">
+                        <h4 class="panel-title">
+                        Búsqueda por Movimiento
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <form id="frmBuscMov" method="post" action=".lib/modulo4/linkModulo4.php" role="form">
+                        <div class="form-group frm-group-custom" style="height: 27px;"></div>
+                        <div class="form-group frm-group-custom">
+                            <label class="control-label lbl-custom">Fecha Envío:</label>
+                            <div style="display: inline;">
+                                <label style="color: #000;">De:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docEnvIni" name="ndocEnvIni">
+                                <label style="color: #000;">hasta:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docEnvFin" name="ndocEnvFin">
+                            </div>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docOfiEnvio" class="control-label lbl-custom">Of. de envío:</label>
+                            <select class="form-control frm-control-custom" id="docOfiEnvio" name="ndocOfiEnvio">
+                                <option value="all">-- Todos --</option>
+                            </select>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label class="control-label lbl-custom">Fecha Recep:</label>
+                            <div style="display: inline;">
+                                <label style="color: #000;">De:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docRcpIni" name="ndocRcpIni">
+                                <label style="color: #000;">hasta:</label><input style="width: 30%" class="form-control frm-control-custom" type="date" id="docRcpFin" name="ndocRcpFin">
+                            </div>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docOfiDestino" class="control-label lbl-custom">Of. destino:</label>
+                            <select class="form-control frm-control-custom" id="docOfiDestino" name="ndocOfiDestino">
+                                <option value="all">-- Todos --</option>
+                            </select>
+                        </div>
+                        <div class="form-group frm-group-custom">
+                            <label for="docEstado" class="control-label lbl-custom">Estado Doc:</label>
+                            <select class="form-control frm-control-custom" id="docEstado" name="ndocEstado">
+                                <option value="all">-- Todos --</option>
+                                <option value="Procesando">En proceso</option>
+                                <option value="Registrado">Sólo registrado</option>
+                                <option value="Terminado">Atendido</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-default" type="button" id="btnBuscarMov" onclick="buscar_documento('movimiento')">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-body" style="padding: 2px 21px; text-align: center;">
+    <button class="btn btn-default" type="button">Imprimir</button>
+</div>
+<div class="panel-body">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+			<span class="panel-title">
+				RESULTADOS
+			</span>
+        </div>
+        <div class="panel-body">
+            <table class="table table-condensed tbl-resultado" id="tblResultadoBusqDoc">
+                <thead style="display: none" id="headBuscDoc">
+                    <tr>
+                        <th>Nro</th>
+                        <th>Origen</th>
+                        <th>Tipo Doc</th>
+                        <th>Documento</th>
+                        <th>Fecha Doc</th>
+                        <th>Of. de Registro</th>
+                        <th>Asunto</th>
+                        <th>Seguimiento</th>
+                    </tr>
+                </thead>
+                <thead style="display: none;" id="headBuscMov">
+                    <tr>
+                        <th>Nro</th>
+                        <th>Origen</th>
+                        <th>Tipo Doc</th>
+                        <th>Documento</th>
+                        <th>Fec Envío</th>
+                        <th>Of. que Envió</th>
+                        <th>Fec Recepción</th>
+                        <th>Of. Destino</th>
+                        <th>Estado Doc</th>
+                        <th>Seguimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <div id="resultSeguimiento"></div>
+        </div>
+    </div>
+</div>

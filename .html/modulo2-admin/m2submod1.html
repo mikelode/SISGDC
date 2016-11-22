@@ -1,0 +1,82 @@
+<div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="overflow: hidden;">
+            <h2 class="panel-title" style="display: inline">
+                TIPO DE DOCUMENTOS REGISTRADOS
+            </h2>
+            <span class="pull-right">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalNuevoTipodoc">NUEVO TIPO DE DOCUMENTO</button>
+            </span>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <table class="table tbl-resultado" id="tblTipoDocumentos">
+                <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>Descripcion del documento</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA CREAR UN NUEVO TIPO DE DOCUMENTO -->
+
+<div class="modal fade" id="modalNuevoTipodoc" tabindex="-1" role="dialog" aria-labelledby="tipoDocumento" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="tipoDocumento">NUEVO TIPO DE DOCUMENTO</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmNuevoTipodoc" method="post" action=".lib/modulo2/linkModulo2-admin.php">
+                    <div class="form-group">
+                        <label class="control-label">Nombre del documento:</label>
+                        <input type="text" class="form-control" name="ntipodocDesc" id="tipodocDesc">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnGrabarTipodoc" onclick="grabar_nuevo_cambio('dockind')">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA EDITAR LOS DATOS DEL TIPO DE DOCUMENTO -->
+
+<div class="modal fade" id="modalEditarTipodoc" tabindex="-1" role="dialog" aria-labelledby="editarTipodoc" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="editarTipodoc">EDITAR TIPO DE DOCUMENTO</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmEditarTipodoc" method="post" action=".lib/modulo2/linkModulo2-admin.php">
+                    <input type="hidden" id="tipodocId" name="ntipodocId">
+                    <div class="form-group">
+                        <label class="control-label">Nombre del documento:</label>
+                        <input type="text" class="form-control" name="ntipodocDescE" id="tipodocDescE">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnEditarTipodoc" onclick="grabar_edicion_tipodoc()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<!-- CREAR USUARIOS -->
+<form id="frmRegUsuario" method="post" action=".lib/modulo1/linkModulo1-admin.php" role="form">
+	<div class="panel-body">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="panel-title">FORMULARIOS PARA LA CREACIÓN DE USUARIOS </h2>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="form-group">
+							<label>DNI del usuario</label>
+							<input type="text" id="usrDni" class="form-control" name="nusrDni" placeholder="DNI">
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="form-group">
+							<label>Nombres y apellidos del usuario</label>
+							<div class="row">
+								<div class="col-md-4">
+									<input type="text" id="usrNombres" name="nusrNombres" class="form-control" placeholder="NOMBRES">
+								</div>
+								<div class="col-md-4">
+									<input type="text" id="usrPaterno" name="nusrPaterno" class="form-control" placeholder="APELLIDO PATERNO">
+								</div>
+								<div class="col-md-4">
+									<input type="text" id="usrMaterno" name="nusrMaterno" class="form-control" placeholder="APELLIDO MATERNO">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label>Área u Oficina donde trabaja</label>
+                            <select class="form-control" id="usrOficina" name="nusrOficina">
+                                <option value="NA">-- Elija uno --</option>
+                            </select>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="operacionEnviar" style="display: none;">
+					<div class="col-md-8">
+						<div class="form-group">
+							<label class="control-label">ESTADO DE ENVIO: Documento registrado pero NO enviado</label>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalOperacionEnviar" onclick="abrir_modal_envio(this)">
+								Enviar Documento
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer" style="overflow: hidden">
+                <div class="pull-right">
+                    <button type="button" id="btnGuardarUsr" onclick="guardar_usuario()" class="btn btn-success" style="width: 100px;">Guardar</button>
+                    <button type="button" id="btnCancelarUsr" class="btn btn-danger" onclick="cargarMenu('.html/main-admin.html')" style="width: 100px;">Cancelar</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</form>

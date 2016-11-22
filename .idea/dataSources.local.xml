@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - muniyrb-sisgdc@localhost" uuid="694b3c46-c8d9-41a1-9236-677702c24c99">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>muniyrb-sisgdc.*</schema-pattern>
+      <default-schemas>muniyrb-sisgdc.*</default-schemas>
+    </data-source>
+  </component>
+</project>

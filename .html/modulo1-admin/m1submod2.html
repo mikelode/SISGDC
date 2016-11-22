@@ -1,0 +1,74 @@
+<div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+			<h2 class="panel-title">
+				CUENTAS DE USUARIO REGISTRADAS
+			</h2>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <table class="table table-condensed tbl-resultado" id="tblUsrRegistrados">
+                <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>DNI</th>
+                    <th colspan="3">Nombre Completo</th>
+                    <th>Oficina</th>
+                    <th>Cuenta de Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Estado</th>
+                    <th style="width: 15%;">Acción</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA EDITAR LOS DATOS DEL USUARIO ELEGIDO -->
+
+<div class="modal fade" id="modalEditarUsuario" tabindex="-1" role="dialog" aria-labelledby="editarUsuario" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="editarUsuario">EDITAR USUARIO</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmEditarUsuario" method="post" action=".lib/modulo1/linkModulo1-admin.php">
+                    <input type="hidden" id="usrId" name="nusrId">
+                    <div class="form-group">
+                        <label class="control-label">DNI del usuario:</label>
+                        <input type="text" class="form-control" name="nusrDni" id="usrDni">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Nombres:</label>
+                        <input type="text" name="nusrNombres" class="form-control" id="usrNombres">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Apellido Paterno:</label>
+                        <input type="text" name="nusrPaterno" class="form-control" id="usrPaterno">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Apellido Materno:</label>
+                        <input type="text" name="nusrMaterno" class="form-control" id="usrMaterno">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Oficina</label>
+                        <select class="form-control" name="nusrOficina" id="usrOficina">
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnGrabarEdicion" onclick="grabar_edicion_usuario()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

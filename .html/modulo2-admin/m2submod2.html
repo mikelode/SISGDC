@@ -1,0 +1,145 @@
+<div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="overflow: hidden;">
+            <h2 class="panel-title" style="display: inline">
+                OFICINAS Y PERSONAS A CARGO
+            </h2>
+            <span class="pull-right">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalNuevoJefe">NUEVO JEFE (1)</button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalNuevaOficina">NUEVA OFICINA (2)</button>
+            </span>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <table class="table tbl-resultado" id="tblOficinasJefes">
+                <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>Oficina</th>
+                    <th>Jefe DNI</th>
+                    <th colspan="3">Jefe Nombre Completo</th>
+                    <th>Accion</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA EDITAR ASIGNACION DE JEFE A OFICINA -->
+
+<div class="modal fade" id="modalEditarOfijefe" tabindex="-1" role="dialog" aria-labelledby="editarOfijefe" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="editarOfijefe">EDITAR DATOS OFICINA</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmEditarOfijefe" method="post" action=".lib/modulo2/linkModulo2-admin.php">
+                    <input type="hidden" id="ofiId" name="nofiId">
+                    <input type="hidden" id="jefId" name="njefId">
+                    <div class="form-group">
+                        <label class="control-label">Oficina:</label>
+                        <input type="text" class="form-control" id="ofiDescE" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Jefe Actual:</label>
+                        <input type="text" class="form-control" id="ofiJefeActual" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Nuevo Jefe:</label>
+                        <select class="form-control" name="nofiNuevoJefe" id="ofiNuevoJefe">
+
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnEditarTipodoc" onclick="grabar_edicion_ofijefe()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA REGISTRAR UN NUEVO JEFE -->
+
+<div class="modal fade" id="modalNuevoJefe" tabindex="-1" role="dialog" aria-labelledby="nuevoJefe" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="nuevJefe">NUEVO PERSONAL</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmNuevoJefe" method="post" action=".lib/modulo2/linkModulo2-admin.php">
+                    <div class="form-group">
+                        <label class="control-label">Número de DNI:</label>
+                        <input type="text" class="form-control" name="njefeDni" id="jefeDni">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Nombres:</label>
+                        <input type="text" class="form-control" name="njefeNombres" id="jefeNombres">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Apellido Paterno:</label>
+                        <input type="text" class="form-control" name="njefePaterno" id="jefePaterno">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Apellido Materno:</label>
+                        <input type="text" class="form-control" name="njefeMaterno" id="jefeMaterno">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnGrabarJefe" onclick="grabar_nuevo_cambio('boss')">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PARA REGISTRAR UNA NUEVA OFICINA -->
+
+<div class="modal fade" id="modalNuevaOficina" tabindex="-1" role="dialog" aria-labelledby="nuevaOficina" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="nuevaOficina">NUEVA OFICINA</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmNuevaOficina" method="post" action=".lib/modulo2/linkModulo2-admin.php">
+                    <div class="form-group">
+                        <label class="control-label">Nombre de la Oficina:</label>
+                        <input type="text" class="form-control" name="nofiDesc" id="ofiDesc">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Nombre Corto de la Oficina:</label>
+                        <input type="text" class="form-control" name="nofiDescCorta" id="ofiDescCorta">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Persona a Cargo (Jefe):</label>
+                        <select class="form-control" name="nofiJefe" id="ofiJefe">
+
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnGrabarOficina" onclick="grabar_nuevo_cambio('office')">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

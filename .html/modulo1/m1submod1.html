@@ -1,0 +1,315 @@
+<form id="frmRegDoc" method="post" action=".lib/modulo1/linkModulo1.php" role="form">
+	<div class="panel-body">
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="overflow: hidden">
+				<span style="float: left; height: 34px; padding: 5px; font-size: 20px; font-weight: bold">DOCUMENTOS INTERNOS: </span>
+				<input type="text" class="form-control" style="width: 60px; float: left" id="periodoTramite" readonly>
+				<div class="input-group" style="float: left;">
+					<input type="text" class="form-control" style="width: 160px; float: left;" id="docId" name="ndocId" onkeydown="ejecutar_teclado(event,'interno')" readonly>
+					<span class="input-group-btn" style="float: left;">
+						<!--<button type="button" id="btnIngresarDoc" class="btn btn-success" style="width: 66px; height: 33px;" data-estado="desactivado" onclick="modo_buscar(this)">-->
+                        <button type="button" id="btnIngresarDoc" class="btn btn-success" style="width: 66px; height: 33px;" data-toggle="modal" data-target="#modalEncontrarDocumento">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</span>
+				</div>
+				<button type="button" onclick="mostrar_documento('anterior','interno')" class="btn btn-success btn-recorrer" style="float: left; margin-left: 10px;"><span class="glyphicon glyphicon-step-backward"></span></button>
+				<button type="button" onclick="mostrar_documento('posterior','interno')" class="btn btn-success btn-recorrer" style="float: left;"><span class="glyphicon glyphicon-step-forward"></span></button>
+				<div class="pull-right">
+					<button type="button" id="btnNuevoDoc" class="btn btn-success" style="width: 100px;" onclick="nuevo_documento('interno')">Nuevo</button>
+					<button type="button" id="btnEditarDoc" class="btn btn-info" style="width: 100px; display: none;" onclick="editar_documento('interno')">Editar</button>
+					<button type="button" id="btnEliminarDoc" class="btn btn-danger" style="width: 100px; display: none;" onclick="eliminar_documento('interno')">Eliminar</button>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Tipo de Documento (*)</label>
+							<select name="ndocTipo" class="form-control" id="docTipo" disabled required>
+								<option value="NA">-- Elegir --</option>
+							</select>
+                            <div class="error-message" style="display:none">
+                                <strong><label class="login-label-error">¡Debe seleccionar un tipo de documento!</label></strong>
+                            </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Nro Reg. de Tramite Documentario</label>
+							<input type="text" class="form-control" id="docCtrlPersonal" name="ndocCtrlPersonal" readonly required>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Fecha del Documento (*)</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="docFecha" name="ndocFecha" readonly required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                            <div class="error-message" style="display:none">
+                                <strong><label class="login-label-error">¡Debe ingresar la fecha del documento!</label></strong>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+						<div class="form-group">
+							<label>DNI del Remitente (*)</label>
+							<input type="text" id="docRemId" class="form-control" name="ndocRemId" readonly required>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="form-group">
+							<label>Nombre Completo del Remitente (*)</label>
+							<div class="row">
+								<div class="col-md-4">
+									<input type="text" id="docRemNombres" name="ndocRemNombres" class="form-control" readonly required>
+								</div>
+								<div class="col-md-4">
+									<input type="text" id="docRemPaterno" name="ndocRemPaterno" class="form-control" readonly required>
+								</div>
+								<div class="col-md-4">
+									<input type="text" id="docRemMaterno" name="ndocRemMaterno" class="form-control" readonly required>
+								</div>
+							</div>
+                            <div class="error-message" style="display:none">
+                                <strong><label class="login-label-error">¡Debe ingresar el nombre del remitente!</label></strong>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Número del Documento</label>
+                            <input type="text" id="docNumero" name="ndocNumero" class="form-control" readonly>
+                        </div>
+                    </div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Referencias del Documento</label>
+							<input type="text" id="docReferencia" name="ndocReferencia" class="form-control" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label>Asunto (*)</label>
+							<textarea name="ndocAsunto" id="docAsunto" cols="30" rows="2" class="form-control" readonly required></textarea>
+                            <div class="error-message" style="display:none">
+                                <strong><label class="login-label-error">¡Debe especificar el asunto del documento!</label></strong>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>Folios</label>
+							<input type="number" class="form-control" id="docFolios" name="ndocFolios" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="operacionEnviar" style="display: none;">
+					<div class="col-md-8">
+						<div class="form-group">
+							<label class="control-label">ESTADO DE ENVIO: Documento registrado pero NO enviado</label>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalOperacionEnviar" onclick="abrir_modal_envio(this)">
+								Enviar Documento
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<button type="button" id="btnGuardarDoc" onclick="guardar_documento('interno')" class="btn btn-success" style="width: 100px; display: none;">Guardar</button>
+				<button type="button" id="btnEnviarDoc" class="btn btn-info" style="width: 100px; display: none;">Enviar</button>
+				<button type="button" id="btnGuardarEdicionDoc" onclick="terminar_edicion_documento('interno')" class="btn btn-success" style="width: 100px; display: none;">Guardar</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div class="modal fade" id="modalOperacionEnviar" tabindex="-1" role="dialog" aria-labelledby="enviarDocumento" aria-hidden="true" style="color:#3c763d">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="enviarDocumento">Enviar Documento</h4>
+			</div>
+			<div class="modal-body">
+				<form id="frmEnvDoc" method="post" action=".lib/modulo1/linkModulo1.php">
+					<div class="form-group">
+						<label for="docEnvioExp" class="control-label">Documento:</label>
+						<div class="form-control" id="docEnvioExp"></div>
+						<input type="hidden" name="ndocEnvioExp" id="hdocEnvioExp">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Usted pertenece a la oficina:</label>
+						<div class="form-control" id="docEnvioOrigen"></div>
+						<input type="hidden" name="ndocEnvioOrigen" id="hdocEnvioOrigen">
+					</div>
+					<div class="form-group">
+						<label for="docEnvioDestino" class="control-label">Enviar el documento a:</label>
+						<select class="form-control select2" name="ndocEnvioDestino[]" id="docEnvioDestino" multiple="multiple" data-placeholder="Agregar Oficina" style="width: 100%; color: #1b809e;">
+							<option value="NA"> -- Elija uno -- </option>
+						</select>
+					</div>
+                    <div class="form-group">
+                        <label for="docEnvioDestino" class="control-label">Detalle u Observación:</label>
+                        <textarea id="docEnvioMensaje" name="ndocEnvioMensaje" class="form-control"></textarea>
+                    </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-primary" onclick="enviar_documento('interno')">Enviar Documento</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="modalEncontrarDocumento" tabindex="-1" role="dialog" aria-labelledby="encontrarDocumento" aria-hidden="true" style="color:#3c763d">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title pull-left" id="encontrarDocumento">Buscar Documento Por: &nbsp;&nbsp;</h4>
+                <div class="pull-left">
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ELEGIR <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" onclick="habilitar_busqueda('fecha')">Fecha de Registro</a></li>
+                            <li><a href="javascript:void(0)" onclick="habilitar_busqueda('asunto')">Asunto</a></li>
+                            <li><a href="javascript:void(0)" onclick="habilitar_busqueda('codigo')">Código</a></li>
+                            <li><a href="javascript:void(0)" onclick="habilitar_busqueda('remitente-persona')">Remitente Persona</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="frmEncontrarDocFechas" class="frm-busqueda-rapida" method="post" action=".lib/modulo1/linkModulo1.php" style="display: none;">
+                    <div class="form-group">
+                        <!--<label class="control-label" style="display: block;">Fecha de Registro:</label>-->
+                        <input type="hidden" name="nidConsulta" value="fechas">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="control-label">Desde:</label>
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" id="desdeFecha" name="ndesdeFecha">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="control-label">Hasta:</label>
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" id="hastaFecha" name="nhastaFecha">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="control-label">&nbsp;</label>
+                                <button type="button" class="btn btn-warning btn-sm" onclick="encontrar_documento('interno',$('#frmEncontrarDocFechas'))">Encontrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="frmEncontrarDocAsunto" class="frm-busqueda-rapida" method="post" action=".lib/modulo1/linkModulo1.php" style="display: none;">
+                    <div class="form-group">
+                        <input type="hidden" name="nidConsulta" value="asunto">
+                        <label class="control-label" style="display: block;">Asunto:</label>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="descAsunto" name="ndescAsunto">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-warning btn-sm" onclick="encontrar_documento('interno',$('#frmEncontrarDocAsunto'))">Encontrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="frmEncontrarDocCodigo" class="frm-busqueda-rapida" method="post" action=".lib/modulo1/linkModulo1.php" style="display: none;">
+                    <div class="form-group">
+                        <input type="hidden" name="nidConsulta" value="codigo">
+                        <label class="control-label" style="display: block;">Código del Documento:</label>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="descCodigo" name="ndescCodigo">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-warning btn-sm" onclick="encontrar_documento('interno',$('#frmEncontrarDocCodigo'))">Encontrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="frmEncontrarDocRemitP" class="frm-busqueda-rapida" method="post" action=".lib/modulo1/linkModulo1.php" style="display: none;">
+                    <div class="form-group">
+                        <input type="hidden" name="nidConsulta" value="remitp">
+                        <label class="control-label" style="display: block;">Remitente:</label>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="descRemitP" name="ndescRemitP">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-warning btn-sm" onclick="encontrar_documento('interno',$('#frmEncontrarDocRemitP'))">Encontrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="tbl-resultado-encontrar">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#docEnvioDestino').select2();
+    $('#docFecha').datetimepicker({
+        format: "YYYY-MM-DD",
+        showClear: true,
+        showClose: true
+    });
+    $('#desdeFecha').datetimepicker({
+        format: "YYYY-MM-DD",
+        showClear: true,
+        showClose: true
+    });
+    $('#hastaFecha').datetimepicker({
+        useCurrent: false,
+        format: "YYYY-MM-DD",
+        showClear: true,
+        showClose: true
+    });
+    $('#desdeFecha').on("dp.change",function(e){
+        $('#hastaFecha').data("DateTimePicker").minDate(e.date);
+    });
+    $('#hastaFecha').on("dp.change", function(e){
+        $('#desdeFecha').data("DateTimePicker").maxDate(e.date);
+    });
+            /*.datepicker({
+        clearBtn: true,
+        format: "yyyy-mm-dd",
+        language: "es",
+        autoclose: true,
+        todayBtn: "linked",
+        todayHighlight: true,
+        enableOnReadonly: false
+    });*/
+</script>

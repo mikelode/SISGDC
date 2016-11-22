@@ -1,0 +1,42 @@
+<br>
+	<div class="mod-header">
+		<h3 class="mod-header-label">Editar &Aacute;rea</h3>
+	</div>
+
+	<div id="mod-body1" class="mod-body">
+		<div id="mod-body1left" class="mod-bodyleft">
+			<div class="mod-body-controls">
+				<label class="mod-body-label">Seleccione &Aacute;rea a Editar</label>
+				<select id="selarea" class="mod-body-input" onChange="cargarArea(this)">
+					<option value="0">-- Seleccione --</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div id="mod-body2" class="mod-body-hide">
+		<div class="mod-bodyleft">
+			<div class="mod-body-controls">
+				<label class="mod-body-label">Descripci&oacute;n de &Aacute;rea</label>
+				<input type="text" id="edtdescarea" class="mod-body-input" placeholder="Descripci&oacute;n de &Aacute;rea">
+				<label id="msjdescarea" class="mod-body-labeldanger">&bull; Debe ingresar una descripci&oacute;n de &aacute;rea</label>
+			</div>
+		</div>
+
+		<div class="mod-bodyright">
+			<div class="mod-body-controls">
+				<label class="mod-body-label">&Aacute;rea Activa?</label>
+				<select id="edtactivo" class="mod-body-input" onChange="">
+					<option value="0">-- Seleccione --</option>
+					<option value="1">S&iacute;</option>
+					<option value="2">No</option>
+				</select>
+				<label id="msjactivo" class="mod-body-labeldanger">&bull; Debe seleccionar una opci&oacute;n</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="mod-footer" class="mod-footer-hide">
+		<button type="button" id="ingresar" class="button btn btn-primary" onClick="validarSubMod4()"><span class="glyphicon glyphicon-ok"></span>  Editar &Aacute;rea</button>
+	</div>
+<br>

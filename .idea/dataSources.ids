@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - muniyrb-sisgdc@localhost" uuid="694b3c46-c8d9-41a1-9236-677702c24c99">
+    <database-info product="MySQL" version="5.7.15-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="muniyrb-sisgdc"/>
+      <table id="2" parent="1" name="gdcarchivador"/>
+      <table id="3" parent="1" name="gdcarchivadorparticular"/>
+      <table id="4" parent="1" name="gdcdocumento"/>
+      <table id="5" parent="1" name="gdchistorial"/>
+      <table id="6" parent="1" name="gdcremitente"/>
+      <table id="7" parent="1" name="gdctipodocumento"/>
+      <table id="8" parent="1" name="munijefeoficina"/>
+      <table id="9" parent="1" name="munioficina"/>
+      <table id="10" parent="1" name="musuarios"/>
+      <table id="11" parent="1" name="tusuarios"/>
+      <table id="12" parent="1" name="gdcderivacion"/>
+      <routine id="13" parent="1" name="FN_FULLNAMEREM">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="14" parent="1" name="FN_GETDESCOFI">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="15" parent="1" name="FN_GETDERIVMSGOF">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="16" parent="1" name="FN_GETDESCTIPODOC">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="17" parent="1" name="FN_GETFECENVIO">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="18" parent="1" name="FN_GETDESCOFTARGET">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <column id="19" parent="2" name="arcId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="20" parent="2" name="arcExp">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="21" parent="2" name="arcEstado">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="22" parent="2" name="arcOrigen">
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="23" parent="2" name="arcRegisterBy">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="24" parent="2" name="arcRegisterAt">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="25" parent="2" name="docId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="26" parent="2" name="arcAnio">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="27" parent="2" name="arcControlPersonal">
+        <comment>Numero de registro de tramite documentario solo para documentos externos</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="28" parent="2" name="arcPrioridad">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="29" parent="2" name="arcFechaRecepcion">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="30" parent="2" name="arcFlagEliminado">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="31" parent="2" name="PRIMARY">
+        <columns>arcId</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="32" parent="2" name="fk_gdcArchivador_gdcDocumento1">
+        <columns>docId</columns>
+        <ref-key>gdcdocumento.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="33" parent="3" name="arpId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="34" parent="3" name="arpExp">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="35" parent="3" name="arpOficina">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="36" parent="3" name="arcId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="3" name="ofiId">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="38" parent="3" name="PRIMARY">
+        <columns>arpId</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="39" parent="3" name="fk_dgcArchivadorParticular_muniOficina1">
+        <columns>ofiId</columns>
+        <ref-key>munioficina.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="40" parent="3" name="fk_gdcArchivadorParticular_gdcArchivador1">
+        <columns>arcId</columns>
+        <ref-key>gdcarchivador.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="41" parent="4" name="docId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="4" name="docAsunto">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="43" parent="4" name="docFolio">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="4" name="docFecha">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="45" parent="4" name="docRegisterBy">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="46" parent="4" name="docRegisterAt">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="47" parent="4" name="tipId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="48" parent="4" name="remId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="49" parent="4" name="docReferencia">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="50" parent="4" name="docNumero">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="51" parent="4" name="PRIMARY">
+        <columns>docId</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="52" parent="4" name="fk_gdcDocumento_gdcRemitente1">
+        <columns>remId</columns>
+        <ref-key>gdcremitente.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="53" parent="4" name="fk_gdcDocumento_gdcTipoDocumento1">
+        <columns>tipId</columns>
+        <ref-key>gdctipodocumento.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="54" parent="5" name="hisId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="55" parent="5" name="hisOfiOrigen">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="56" parent="5" name="hisOfiDestino">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="57" parent="5" name="hisFlagR">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="58" parent="5" name="hisFlagA">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="59" parent="5" name="hisFlagD">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="60" parent="5" name="hisDateTimeR">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="61" parent="5" name="hisDateTimeA">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="62" parent="5" name="hisDateTimeD">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="63" parent="5" name="hisDescR">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="64" parent="5" name="hisDescA">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="65" parent="5" name="hisDescD">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="66" parent="5" name="hisIdSourceD">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="67" parent="5" name="arcId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="68" parent="5" name="hisRegisterBy">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="69" parent="5" name="hisRegisterAt">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="70" parent="5" name="PRIMARY">
+        <columns>hisId</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="71" parent="5" name="fk_gdcHistorial_gdcArchivador1">
+        <columns>arcId</columns>
+        <ref-key>gdcarchivador.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="72" parent="6" name="remId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="73" parent="6" name="remDoc">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="74" parent="6" name="remNombres">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="75" parent="6" name="remPaterno">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="76" parent="6" name="remMaterno">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="77" parent="6" name="remDesc">
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="78" parent="6" name="remTipo">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="79" parent="6" name="PRIMARY">
+        <columns>remId</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="7" name="tipId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="81" parent="7" name="tipDesc">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="82" parent="7" name="tipDescAbrv">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="83" parent="7" name="PRIMARY">
+        <columns>tipId</columns>
+        <primary>1</primary>
+      </key>
+      <column id="84" parent="8" name="jefId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="85" parent="8" name="jefDni">
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="86" parent="8" name="jefNombres">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="87" parent="8" name="jefPaterno">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="88" parent="8" name="jefMaterno">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="89" parent="8" name="jefActivo">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="90" parent="8" name="PRIMARY">
+        <columns>jefId</columns>
+        <primary>1</primary>
+      </key>
+      <column id="91" parent="9" name="ofiId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="9" name="ofiCod">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="93" parent="9" name="ofiDesc">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="94" parent="9" name="ofiDescC">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="95" parent="9" name="ofiActivo">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="96" parent="9" name="jefId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="97" parent="9" name="PRIMARY">
+        <columns>ofiId</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="98" parent="9" name="fk_muniOficina_muniJefeOficina1">
+        <columns>jefId</columns>
+        <ref-key>munijefeoficina.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="99" parent="10" name="nCodigo">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="100" parent="10" name="cUsuario">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="101" parent="10" name="cPass">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="102" parent="10" name="nTipo">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="103" parent="10" name="cActivo">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="104" parent="10" name="ofiId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="10" name="cNombres">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="106" parent="10" name="cPaterno">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="107" parent="10" name="cMaterno">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="108" parent="10" name="cDni">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="109" parent="10" name="cFlagEliminado">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="110" parent="10" name="PRIMARY">
+        <columns>nCodigo</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="111" parent="10" name="fk_mUsuarios_muniOficina1">
+        <columns>ofiId</columns>
+        <ref-key>munioficina.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="112" parent="11" name="nCodigo">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="113" parent="11" name="nCodUsuario">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="114" parent="11" name="dTimeStamp">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="115" parent="11" name="PRIMARY">
+        <columns>nCodigo
+nCodUsuario</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="116" parent="11" name="fk_tUsuarios_mUsuarios">
+        <columns>nCodUsuario</columns>
+        <ref-key>musuarios.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="117" parent="12" name="derId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="118" parent="12" name="hisId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="119" parent="12" name="derTipo">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="120" parent="12" name="derExp">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="121" parent="12" name="derDocTipo">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="12" name="derDocControlPersonal">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="123" parent="12" name="derDestinatarios">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="124" parent="12" name="derDocDetalle">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="125" parent="12" name="derDocReferencia">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="126" parent="12" name="derDerivadoBy">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="127" parent="12" name="derDerivadoAt">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="128" parent="12" name="PRIMARY">
+        <columns>derId</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="129" parent="12" name="fk_gdcderivacion_gdchistorial1">
+        <columns>hisId</columns>
+        <ref-key>gdchistorial.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <argument id="130" parent="13">
+        <direction>RETURN</direction>
+        <data-type>varchar(1000)</data-type>
+      </argument>
+      <argument id="131" parent="13" name="id">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="132" parent="13" name="tipo">
+        <direction>IN</direction>
+        <data-type>varchar(45)</data-type>
+      </argument>
+      <argument id="133" parent="14">
+        <direction>RETURN</direction>
+        <data-type>varchar(200)</data-type>
+      </argument>
+      <argument id="134" parent="14" name="idOfi">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="135" parent="15">
+        <direction>RETURN</direction>
+        <data-type>varchar(1000)</data-type>
+      </argument>
+      <argument id="136" parent="15" name="his">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="137" parent="16">
+        <direction>RETURN</direction>
+        <data-type>varchar(50)</data-type>
+      </argument>
+      <argument id="138" parent="16" name="id">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="139" parent="17">
+        <direction>RETURN</direction>
+        <data-type>datetime</data-type>
+      </argument>
+      <argument id="140" parent="17" name="idsource">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="141" parent="18">
+        <direction>RETURN</direction>
+        <data-type>varchar(10000)</data-type>
+      </argument>
+      <argument id="142" parent="18" name="codigos">
+        <direction>IN</direction>
+        <data-type>varchar(200)</data-type>
+      </argument>
+    </database-model>
+  </data-source>
+</component>
