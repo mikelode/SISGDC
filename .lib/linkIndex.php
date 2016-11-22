@@ -124,6 +124,65 @@ if(isset($_POST['sesion']))
 	}
 }
 
+if(isset($_POST['password']))
+{
+    session_start();
+    $Conexion = conexionBD();
+    $Respuesta = '';
+
+    if(!$Conexion)
+    {
+        $Respuesta = 500;
+        $msg = ERRORCONEXION;
+    }
+    else
+    {
+        $Respuesta = '';
+        $msg = '';
+
+        $Conexion->autocommit(false);
+
+        try{
+
+            $Sentencia = "select nCodigo, cUsuario
+                from `" . BASEDATOS . "`.mUsuarios
+                where nCodigo='" . $_SESSION['codigo'] . "' and cPass = '".$_POST['ncurPass']."'  and cActivo=1";
+
+            $check = $Conexion->query($Sentencia);
+            if(!$check)
+                throw new Exception('No se pudo comprobar la contrseña actual');
+
+            if($check->num_rows == 0)
+            {
+                throw new Exception('Su contraseña actual no es correcta');
+            }
+
+            if(strcmp($_POST['nnewPass'],$_POST['nrepPass']) !== 0)
+            {
+                throw new Exception('Los valores para la contrseña nueva no son iguales');
+            }
+
+            $Sentencia = "UPDATE musuarios SET cPass = '".$_POST['nrepPass']."' WHERE nCodigo = '".$_SESSION['codigo']."';  ";
+
+            if(!$Conexion->query($Sentencia))
+                throw new Exception('No se pudo actualizar la nueva contraseña');
+
+            $Respuesta = 200;
+            $msg = 'Contraseña cambiada correctamente';
+
+            $Conexion->commit();
+        }catch (Exception $e){
+            $Conexion->rollback();
+            $Respuesta = 500;
+            $msg = 'Error: '.$e->getMessage()."\n";
+        }
+
+        $Conexion->close();
+    }
+
+    echo json_encode(array('Respuesta' => $Respuesta, 'msg' => $msg));
+}
+
 /*if (isset($_POST['cargarProximaPelea']))
 {
 	$Conexion=conexionBD();

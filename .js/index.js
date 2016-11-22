@@ -8,7 +8,14 @@ window.onload= function()
 
 			if (NroReg[0]==1)
 			{
-				document.getElementById("user").innerHTML = "<button type='button' id='iduser' class='btn btn-default' readonly><span class='glyphicon glyphicon-user'></span> " + NroReg[2].toUpperCase(); + "</button>";
+                var btnUsuario = "<div class='btn-group'>" +
+                                "<button style='width: 134px' type='button' id='iduser' class='btn btn-default btn-sm dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>" +
+                                "<span class='glyphicon glyphicon-user'></span> " + NroReg[2].toUpperCase() + "<span class='caret'></span></button>" +
+                                "<ul class='dropdown-menu' style='color: black;'>" +
+                                "<li><a href='#' data-toggle='modal' data-target='#modalChangePass'>Cambiar contrseña</a></li>" +
+                                "</ul></div>";
+
+				document.getElementById("user").innerHTML = btnUsuario;
 				document.getElementById("close").innerHTML = "<button type='button' id='cerrar' class='btn btn-danger' onclick='salir()'><span class='glyphicon glyphicon-log-out'></span> Cerrar Sesión</button>";
 				document.getElementById("headofi").innerHTML = "<h3>" + NroReg[5] + "</h3>";
 				cargarMenu('.html/' + NroReg[6]);
@@ -139,7 +146,14 @@ function ingresar()
 			
 			if (NroReg[0]==1)
 			{
-				document.getElementById("user").innerHTML = "<button type='button' id='iduser' class='btn btn-default' readonly><span class='glyphicon glyphicon-user'></span> " + NroReg[2].toUpperCase(); + "</button>";
+                var btnUsuario = "<div class='btn-group'>" +
+                    "<button style='width: 134px' type='button' id='iduser' class='btn btn-default btn-sm dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>" +
+                    "<span class='glyphicon glyphicon-user'></span> " + NroReg[2].toUpperCase() + "<span class='caret'></span></button>" +
+                    "<ul class='dropdown-menu' style='color: black;'>" +
+                    "<li><a href='#' data-toggle='modal' data-target='#modalChangePass'>Cambiar contrseña</a></li>" +
+                    "</ul></div>";
+
+				document.getElementById("user").innerHTML = btnUsuario;
 				document.getElementById("close").innerHTML = "<button type='button' id='cerrar' class='btn btn-danger' onclick='salir()'><span class='glyphicon glyphicon-log-out'></span> Cerrar Sesión</button>";
 				document.getElementById("headofi").innerHTML = "<h3>" + NroReg[5] + "</h3>";
 				cargarMenu('.html/'+NroReg[6]);
@@ -281,4 +295,55 @@ function validar_formulario(form, origen)
     }
 
     return JSON.stringify(respuesta);
+}
+
+function guardar_password(frm)
+{
+    var url = frm.prop('action');
+    var data = frm.serialize() + '&password=1';
+
+    var cp = $('#curPass').val();
+    cp = cp.trim();
+    var p1 = $('#newPass').val();
+    p1 = p1.trim();
+    var p2 = $('#repPass').val();
+    p2 = p2.trim();
+
+    if(cp == '')
+    {
+        alert('Debe ingresar su contraseña actual');
+        return;
+    }
+    if(p1 == '')
+    {
+        alert('Debe ingresar su nueva contraseña');
+        return;
+    }
+    if(p2 == '')
+    {
+        alert('Debe repetir la nueva contraseña ingresada anteriormente');
+        return;
+    }
+    if(p1 !== p2)
+    {
+        alert('Ingrese valores iguales en Contraseña Nueva y Repita Contraseña Nueva');
+        return;
+    }
+
+    $.post(url,data,function(response){
+        response = $.parseJSON(response);
+        if(response.Respuesta == 200)
+        {
+            alert(response.msg);
+            $(':input',frm)
+                .not(':button')
+                .val('');
+
+            $('#modalChangePass').modal('hide');
+        }
+        else
+        {
+            alert(response.msg);
+        }
+    });
 }
