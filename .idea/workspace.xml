@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c0622f-492c-42c4-b31e-07b16d6c3fdb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.html/main.html" afterPath="$PROJECT_DIR$/.html/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.js/index.js" afterPath="$PROJECT_DIR$/.js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lib/linkIndex.php" afterPath="$PROJECT_DIR$/.lib/linkIndex.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lib/_config.php" afterPath="$PROJECT_DIR$/.lib/_config.php" />
     </list>
     <ignored path="SISGDC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,135 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="_config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.lib/_config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="42.653847">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34991422">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-              <folding>
-                <marker date="1479847131463" expanded="true" signature="268:887" placeholder="..." />
-                <marker date="1479847131463" expanded="true" signature="321:333" placeholder="..." />
-                <marker date="1479847131463" expanded="true" signature="695:708" placeholder="..." />
-                <marker date="1479847131463" expanded="true" signature="709:881" placeholder="..." />
-                <marker date="1479847131463" expanded="true" signature="4860:4872" placeholder="..." />
-                <marker date="1479847131463" expanded="true" signature="5210:5223" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modulo1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.js/modulo1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="371" column="21" selection-start-line="371" selection-start-column="21" selection-end-line="371" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linkIndex.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.lib/linkIndex.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.730769">
-              <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
-              <folding>
-                <marker date="1479846805290" expanded="true" signature="616:900" placeholder="select count..mUsuarios..." />
-                <marker date="1479846805290" expanded="true" signature="2287:2555" placeholder="select count..mUsuarios..." />
-                <marker date="1479846805290" expanded="true" signature="3420:3569" placeholder="select count..mUsuarios..." />
-                <marker date="1479846805290" expanded="true" signature="3420:3607" placeholder="select count..mUsuarios..." />
-                <marker date="1479846805290" expanded="true" signature="4125:4155" placeholder="UPDATE musua..." />
-                <marker date="1479846805290" expanded="true" signature="4125:4178" placeholder="UPDATE musua..." />
-                <marker date="1479846805290" expanded="true" signature="4125:4196" placeholder="UPDATE musua..." />
-                <marker date="1479846805290" expanded="true" signature="4125:4220" placeholder="UPDATE musua..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linkModulo1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.lib/modulo1/linkModulo1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="379" column="4" selection-start-line="379" selection-start-column="4" selection-end-line="379" selection-end-column="4" />
-              <folding>
-                <marker date="1479743856655" expanded="true" signature="316:362" placeholder="select * fro..gdcTipoDocumento..." />
-                <marker date="1479743856655" expanded="true" signature="550:776" placeholder="select a.ofi..munioficina..." />
-                <marker date="1479743856655" expanded="true" signature="1038:1112" placeholder="select ofiId..munioficina..." />
-                <marker date="1479743856655" expanded="true" signature="1296:1984" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="2450:2629" placeholder="select a.nCo..musuarios..." />
-                <marker date="1479743856655" expanded="true" signature="3084:3130" placeholder="select * fro..gdcTipoDocumento..." />
-                <marker date="1479743856655" expanded="true" signature="3318:3392" placeholder="select ofiId..munioficina..." />
-                <marker date="1479743856655" expanded="true" signature="3576:4347" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="4976:5155" placeholder="select a.nCo..musuarios..." />
-                <marker date="1479743856655" expanded="true" signature="5604:5645" placeholder="select * fro..mCategorias..." />
-                <marker date="1479743856655" expanded="true" signature="6174:6410" placeholder="INSERT INTO gdcremitente..." />
-                <marker date="1479743856655" expanded="true" signature="6530:6766" placeholder="INSERT INTO gdcremitente..." />
-                <marker date="1479743856655" expanded="true" signature="6809:6957" placeholder="INSERT INTO gdcremitente..." />
-                <marker date="1479743856655" expanded="true" signature="7220:7389" placeholder="INSERT INTO gdcdocumento..." />
-                <marker date="1479743856655" expanded="true" signature="7220:7601" placeholder="INSERT INTO gdcdocumento..." />
-                <marker date="1479743856655" expanded="true" signature="8005:8345" placeholder="INSERT INTO gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="8418:8856" placeholder="INSERT INTO gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="9041:9388" placeholder="INSERT INTO gdchistorial..." />
-                <marker date="1479743856655" expanded="true" signature="9616:9791" placeholder="INSERT INTO gdcarchivadorparticular..." />
-                <marker date="1479743856655" expanded="true" signature="10616:10677" placeholder="select docId..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="11084:11351" placeholder="update gdcdo..." />
-                <marker date="1479743856655" expanded="true" signature="11084:11425" placeholder="update gdcdo..." />
-                <marker date="1479743856655" expanded="true" signature="11459:11567" placeholder="UPDATE gdcar..." />
-                <marker date="1479743856655" expanded="true" signature="11680:11731" placeholder="select remId..gdcdocumento..." />
-                <marker date="1479743856655" expanded="true" signature="12093:12322" placeholder="update gdcre..." />
-                <marker date="1479743856655" expanded="true" signature="12420:12565" placeholder="update gdcre..." />
-                <marker date="1479743856655" expanded="true" signature="12816:13075" placeholder="UPDATE gdcdo..." />
-                <marker date="1479743856655" expanded="true" signature="12816:13145" placeholder="UPDATE gdcdo..." />
-                <marker date="1479743856655" expanded="true" signature="13179:13429" placeholder="UPDATE gdcar..." />
-                <marker date="1479743856655" expanded="true" signature="13572:14030" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="14066:14933" placeholder="select repla..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="16188:16286" placeholder="select min(a..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="16310:16409" placeholder="select max(a..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="17335:17514" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="17930:18107" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="18498:18623" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="18498:18671" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="19007:19768" placeholder="select a.arc..gdcarchivador..." />
-                <marker date="1479743856655" expanded="true" signature="20449:20628" placeholder="select a.nCo..musuarios..." />
-                <marker date="1479743856655" expanded="true" signature="21617:21742" placeholder="SELECT hisId..gdchistorial..." />
-                <marker date="1479743856655" expanded="true" signature="22124:22287" placeholder="UPDATE gdchi..." />
-                <marker date="1479743856655" expanded="true" signature="22688:22830" placeholder="INSERT INTO gdchistorial..." />
-                <marker date="1479743856655" expanded="true" signature="23650:24045" placeholder="INSERT INTO gdcderivacion..." />
-                <marker date="1479743856655" expanded="true" signature="24222:24314" placeholder="UPDATE gdcar..." />
-                <marker date="1479743856655" expanded="true" signature="25351:25411" placeholder="UPDATE gdcar..." />
-                <marker date="1479743856655" expanded="true" signature="26157:26383" placeholder="select a.ofi..munioficina..." />
-                <marker date="1479743856655" expanded="true" signature="26951:27993" placeholder="SELECT FN_GE..gdchistorial..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.html/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.153847">
-              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m4submod2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.html/modulo4/m4submod2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.923077">
-              <caret line="50" column="100" selection-start-line="50" selection-start-column="100" selection-end-line="50" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.5788531">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -210,7 +84,6 @@
         <option value="$PROJECT_DIR$/.lib/_conexion.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.html/modulo2.html" />
-        <option value="$PROJECT_DIR$/.lib/_config.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/694b3c46-c8d9-41a1-9236-677702c24c99/console.sql" />
         <option value="$PROJECT_DIR$/.html/modulo1.html" />
         <option value="$PROJECT_DIR$/.html/modulo4.html" />
@@ -256,6 +129,7 @@
         <option value="$PROJECT_DIR$/.html/main.html" />
         <option value="$PROJECT_DIR$/.lib/linkIndex.php" />
         <option value="$PROJECT_DIR$/.js/index.js" />
+        <option value="$PROJECT_DIR$/.lib/_config.php" />
       </list>
     </option>
   </component>
@@ -299,8 +173,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,52 +204,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value=".lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SISGDC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SISGDC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modulo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SISGDC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SISGDC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SISGDC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SISGDC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,24 +274,24 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22844176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5220949" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -502,13 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.lib/_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08438061">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -579,7 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,7 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36624774">
           <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -595,7 +414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18312387">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.3910806">
           <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,16 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47855917">
           <caret line="150" column="53" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="53" />
-          <folding>
-            <marker date="1479002511295" expanded="true" signature="12344:12359" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="12421:12435" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="12913:12927" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="13153:13167" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="13459:13471" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="14238:14253" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="14392:14404" placeholder="..." />
-            <marker date="1479002511295" expanded="true" signature="14504:14516" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,21 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1831238">
           <caret line="397" column="32" selection-start-line="397" selection-start-column="32" selection-end-line="397" selection-end-column="32" />
-          <folding>
-            <element signature="e#25#43#0#PHP" expanded="false" />
-            <marker date="1479824793665" expanded="true" signature="341:407" placeholder="select ofiId..munioficina..." />
-            <marker date="1479824793665" expanded="true" signature="610:653" placeholder="select tipId..gdctipodocumento..." />
-            <marker date="1479824793665" expanded="true" signature="1093:1099" placeholder="select nCodi..mAreas..." />
-            <marker date="1479824793665" expanded="true" signature="1093:1159" placeholder="select ofiId..munioficina..." />
-            <marker date="1479824793665" expanded="true" signature="1390:1539" placeholder="select nCodi..musuarios..." />
-            <marker date="1479824793665" expanded="true" signature="1390:1577" placeholder="select nCodi..musuarios..." />
-            <marker date="1479824793665" expanded="true" signature="1390:1601" placeholder="select nCodi..musuarios..." />
-            <marker date="1479824793665" expanded="true" signature="2265:2822" placeholder="SELECT a.doc..gdcdocumento..." />
-            <marker date="1479824793665" expanded="true" signature="4495:5533" placeholder="SELECT a.doc..gdcdocumento..." />
-            <marker date="1479824793665" expanded="true" signature="7380:8304" placeholder="SELECT b.his..gdcarchivador..." />
-            <marker date="1479824793665" expanded="true" signature="13709:14743" placeholder="SELECT FN_GE..gdcarchivador..." />
-            <marker date="1479824793665" expanded="true" signature="14816:15960" placeholder="SELECT FN_GE..gdcarchivador..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5334477">
           <caret line="226" column="5" selection-start-line="226" selection-start-column="5" selection-end-line="226" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,112 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.082585275">
           <caret line="131" column="88" selection-start-line="131" selection-start-column="88" selection-end-line="131" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.html/modulo4/m4submod2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.923077">
-          <caret line="50" column="100" selection-start-line="50" selection-start-column="100" selection-end-line="50" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.lib/modulo1/linkModulo1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="379" column="4" selection-start-line="379" selection-start-column="4" selection-end-line="379" selection-end-column="4" />
-          <folding>
-            <marker date="1479743856655" expanded="true" signature="316:362" placeholder="select * fro..gdcTipoDocumento..." />
-            <marker date="1479743856655" expanded="true" signature="550:776" placeholder="select a.ofi..munioficina..." />
-            <marker date="1479743856655" expanded="true" signature="1038:1112" placeholder="select ofiId..munioficina..." />
-            <marker date="1479743856655" expanded="true" signature="1296:1984" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="2450:2629" placeholder="select a.nCo..musuarios..." />
-            <marker date="1479743856655" expanded="true" signature="3084:3130" placeholder="select * fro..gdcTipoDocumento..." />
-            <marker date="1479743856655" expanded="true" signature="3318:3392" placeholder="select ofiId..munioficina..." />
-            <marker date="1479743856655" expanded="true" signature="3576:4347" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="4976:5155" placeholder="select a.nCo..musuarios..." />
-            <marker date="1479743856655" expanded="true" signature="5604:5645" placeholder="select * fro..mCategorias..." />
-            <marker date="1479743856655" expanded="true" signature="6174:6410" placeholder="INSERT INTO gdcremitente..." />
-            <marker date="1479743856655" expanded="true" signature="6530:6766" placeholder="INSERT INTO gdcremitente..." />
-            <marker date="1479743856655" expanded="true" signature="6809:6957" placeholder="INSERT INTO gdcremitente..." />
-            <marker date="1479743856655" expanded="true" signature="7220:7389" placeholder="INSERT INTO gdcdocumento..." />
-            <marker date="1479743856655" expanded="true" signature="7220:7601" placeholder="INSERT INTO gdcdocumento..." />
-            <marker date="1479743856655" expanded="true" signature="8005:8345" placeholder="INSERT INTO gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="8418:8856" placeholder="INSERT INTO gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="9041:9388" placeholder="INSERT INTO gdchistorial..." />
-            <marker date="1479743856655" expanded="true" signature="9616:9791" placeholder="INSERT INTO gdcarchivadorparticular..." />
-            <marker date="1479743856655" expanded="true" signature="10616:10677" placeholder="select docId..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="11084:11351" placeholder="update gdcdo..." />
-            <marker date="1479743856655" expanded="true" signature="11084:11425" placeholder="update gdcdo..." />
-            <marker date="1479743856655" expanded="true" signature="11459:11567" placeholder="UPDATE gdcar..." />
-            <marker date="1479743856655" expanded="true" signature="11680:11731" placeholder="select remId..gdcdocumento..." />
-            <marker date="1479743856655" expanded="true" signature="12093:12322" placeholder="update gdcre..." />
-            <marker date="1479743856655" expanded="true" signature="12420:12565" placeholder="update gdcre..." />
-            <marker date="1479743856655" expanded="true" signature="12816:13075" placeholder="UPDATE gdcdo..." />
-            <marker date="1479743856655" expanded="true" signature="12816:13145" placeholder="UPDATE gdcdo..." />
-            <marker date="1479743856655" expanded="true" signature="13179:13429" placeholder="UPDATE gdcar..." />
-            <marker date="1479743856655" expanded="true" signature="13572:14030" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="14066:14933" placeholder="select repla..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="16188:16286" placeholder="select min(a..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="16310:16409" placeholder="select max(a..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="17335:17514" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="17930:18107" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="18498:18623" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="18498:18671" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="19007:19768" placeholder="select a.arc..gdcarchivador..." />
-            <marker date="1479743856655" expanded="true" signature="20449:20628" placeholder="select a.nCo..musuarios..." />
-            <marker date="1479743856655" expanded="true" signature="21617:21742" placeholder="SELECT hisId..gdchistorial..." />
-            <marker date="1479743856655" expanded="true" signature="22124:22287" placeholder="UPDATE gdchi..." />
-            <marker date="1479743856655" expanded="true" signature="22688:22830" placeholder="INSERT INTO gdchistorial..." />
-            <marker date="1479743856655" expanded="true" signature="23650:24045" placeholder="INSERT INTO gdcderivacion..." />
-            <marker date="1479743856655" expanded="true" signature="24222:24314" placeholder="UPDATE gdcar..." />
-            <marker date="1479743856655" expanded="true" signature="25351:25411" placeholder="UPDATE gdcar..." />
-            <marker date="1479743856655" expanded="true" signature="26157:26383" placeholder="select a.ofi..munioficina..." />
-            <marker date="1479743856655" expanded="true" signature="26951:27993" placeholder="SELECT FN_GE..gdchistorial..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.js/modulo1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="371" column="21" selection-start-line="371" selection-start-column="21" selection-end-line="371" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.lib/linkIndex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.730769">
-          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
-          <folding>
-            <marker date="1479846805290" expanded="true" signature="616:900" placeholder="select count..mUsuarios..." />
-            <marker date="1479846805290" expanded="true" signature="2287:2555" placeholder="select count..mUsuarios..." />
-            <marker date="1479846805290" expanded="true" signature="3420:3569" placeholder="select count..mUsuarios..." />
-            <marker date="1479846805290" expanded="true" signature="3420:3607" placeholder="select count..mUsuarios..." />
-            <marker date="1479846805290" expanded="true" signature="4125:4155" placeholder="UPDATE musua..." />
-            <marker date="1479846805290" expanded="true" signature="4125:4178" placeholder="UPDATE musua..." />
-            <marker date="1479846805290" expanded="true" signature="4125:4196" placeholder="UPDATE musua..." />
-            <marker date="1479846805290" expanded="true" signature="4125:4220" placeholder="UPDATE musua..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.html/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.153847">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="42.653847">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -927,14 +609,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34991422">
           <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding>
-            <marker date="1479847131463" expanded="true" signature="268:887" placeholder="..." />
-            <marker date="1479847131463" expanded="true" signature="321:333" placeholder="..." />
-            <marker date="1479847131463" expanded="true" signature="695:708" placeholder="..." />
-            <marker date="1479847131463" expanded="true" signature="709:881" placeholder="..." />
-            <marker date="1479847131463" expanded="true" signature="4860:4872" placeholder="..." />
-            <marker date="1479847131463" expanded="true" signature="5210:5223" placeholder="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9910233">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.js/modulo1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.77186966">
+          <caret line="371" column="21" selection-start-line="371" selection-start-column="21" selection-end-line="371" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.lib/linkIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26750448">
+          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.lib/modulo1/linkModulo1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6714542">
+          <caret line="379" column="4" selection-start-line="379" selection-start-column="4" selection-end-line="379" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.html/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8473968">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.html/modulo4/m4submod2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.443447">
+          <caret line="50" column="100" selection-start-line="50" selection-start-column="100" selection-end-line="50" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.lib/_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5788531">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

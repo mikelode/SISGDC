@@ -14,8 +14,8 @@ $Usuario='root'; //Usuario para acceso a la Base de Datos
 $Password='Mikelode100x'; //Password de acceso a la Base de Datos
 $Basedatos='MUNIYRB-SISGDC'; //Nombre de la Base de Datos
 $Cliente='Municipalidad Distrital de Yarabamba';
-$Sistema='Sistema de Gesti&oacute;n de Inventario Inform&aacute;tico';
-$Alias='SISGDC';
+$Sistema='Sistema de Gesti&oacute;n Documentaria';
+$Alias='SISGLG';
 $Autor='SYMVA INC.';
 
 $ErrorConexion='Error de conexion a la Base de Datos, revise los parametros';
